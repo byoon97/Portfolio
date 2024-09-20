@@ -1,0 +1,21 @@
+.underline-effect {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.underline-effect::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #66FCF1;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-effect:hover::after {
+    width: 120%;
+    left: -10%;
+}
