@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { projects } from "../../public/projects/projects";
 import { motion } from "framer-motion";
 import { GrLanguage } from "react-icons/gr";
@@ -17,8 +16,11 @@ const Experience: React.FC = () => {
           Projects
         </h3>
         <div className="md:mt-14 lg:mt-20 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-thin scrollbar-track-rgb(35,21,59)/20 scrollbar-thumb-[#87C233]/80 items-end">
-          {projects.map((proj) => (
-            <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44">
+          {projects.map((proj, i) => (
+            <div
+              key={i}
+              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
+            >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -1,9 +1,8 @@
-import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { SocialIcon } from "react-social-icons";
 import * as THREE from "three";
-import DOTS from "vanta/dist/vanta.dots.min";
+
 import NET from "vanta/dist/vanta.net.min";
 
 const Hero: React.FC = () => {

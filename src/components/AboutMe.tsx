@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import "../css/under-line.css";
 import { motion } from "framer-motion";
 
 const AboutMe: React.FC = () => {
