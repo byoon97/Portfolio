@@ -9,12 +9,11 @@ const AboutMe: React.FC = () => {
       transition={{ duration: 1.5 }}
       className="flex flex-col relative h-screen text-center md:text-left max-w-5xl px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-14 md:top-24 uppercase tracking-[20px] text-[#87C332] text-2xl">
+      <h3 className="pl-[20px] absolute top-24 md:top-42 uppercase tracking-[20px] text-[#87C332] text-2xl">
         About Me
       </h3>
 
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        {" "}
+      <div className="flex flex-col md:flex-row items-center justify-center mt-20">
         <motion.img
           initial={{
             x: -200,
@@ -33,7 +32,7 @@ const AboutMe: React.FC = () => {
           className="mb-10 md:mb-0 flex-shrink-0 w-56 object-cover rounded-lg md:w-64 md:h-95 xl:w-[333.3px] xl:h-[425px]"
         />
         <div className="space-y-10 px-0 md:px-10">
-          <p className="text-[12px] md:text-[14px]">
+          <p className="text-[12px] md:text-[14px] text-gray-500">
             Located in Queens, New York, I am a Bi-Lingual (Korean/English)
             Software Developer with a main focus on the Front End. I enjoy
             creating web-apps using the latest technology and cleanest design

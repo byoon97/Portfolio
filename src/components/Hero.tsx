@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { SocialIcon } from "react-social-icons";
+import "../css/corner-border.css";
 import * as THREE from "three";
 
 import NET from "vanta/dist/vanta.net.min";
@@ -8,7 +8,7 @@ import NET from "vanta/dist/vanta.net.min";
 const Hero: React.FC = () => {
   const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(
     null
-  ); 
+  );
   const myRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,36 +43,18 @@ const Hero: React.FC = () => {
 
   return (
     <div
-      className="h-screen flex flex-col items-center justify-center"
+      className="h-screen flex flex-col items-center justify-center "
       ref={myRef}
     >
-      <h1 className="text-5xl font-semibold text-[#87C233]">I am Brandon</h1>
-      <div className="text-4xl font-semibold text-center pt-2">
-        <span className="text-white">{text}</span>
-        <Cursor cursorColor="#F7AB0A" />
-      </div>
-      <div className="flex flex-row items-center space-x-4 pb-4 pt-6">
-        <a
-          href="https://www.linkedin.com/in/byoon888/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SocialIcon url="https://www.linkedin.com/in/byoon888/" as="div" />
-        </a>
-        <a
-          href="https://github.com/byoon97"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SocialIcon url="https://github.com/byoon97" as="div" />
-        </a>
-        <a
-          href="https://medium.com/@byoon5397"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SocialIcon url="https://medium.com/@byoon5397" as="div" />
-        </a>
+      <div className="relative w-[90%] corner-border p-6">
+        <h1 className="text-lg text-[#87C233] uppercase text-left tracking-[5px] font-thin">
+          Brandon Yoon
+        </h1>
+        <div className=""></div>
+        <div className="text-xl font-semibold text-left pt-2">
+          <span className="text-white">{text}</span>
+          <Cursor cursorColor="#87C233" />
+        </div>
       </div>
     </div>
   );

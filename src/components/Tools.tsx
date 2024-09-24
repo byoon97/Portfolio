@@ -9,27 +9,25 @@ const Tools: React.FC = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex flex-col items-center justify-center "
+      className=""
     >
-      <div className="h-screen relative flex flex-col md:flex-row justify-evenly mx-auto items-center z-0 text-center">
-        <div className="flex flex-col absolute top-24 space-y-4">
-          <h3 className=" uppercase tracking-[13px] text-[#87C332] text-2xl">
-            Tools and Technologies
-          </h3>
-          <h4 className="text-[14px] text-gray-500">
-            Frameworks, Libraries, and Technologies I am comfortable working
-            with on a daily basis
-          </h4>
-        </div>
+      <div className="h-screen flex flex-col items-center justify-center relative mx-auto  text-center">
+        <h3 className="pl-[20px] absolute top-24 md:top-42 uppercase tracking-[20px] text-[#87C332] text-2xl text-center">
+          Tools
+        </h3>
 
+        {/* <h4 className=" text-[12.5px] mb-20">
+          Tools, Frameworks, and Libraries I am comfortable using on a daily
+          basis
+        </h4> */}
         <motion.div
-          className="grid grid-cols-4 gap-4 mb-4"
+          className="grid grid-cols-4 gap-4 mb-22"
           initial="hidden"
           whileInView="visible"
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.2, // Adjust this value for more or less delay
+                staggerChildren: 0.2, 
               },
             },
           }}
@@ -42,10 +40,10 @@ const Tools: React.FC = () => {
                 hidden: { opacity: 0, y: -50 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.5, delay: index * 0.1 }} // Add index-based delay
+              transition={{ duration: 0.5, delay: index * 0.1 }} 
             >
               <Image src={icon.img} width={40} height={40} alt={icon.name} />
-              <h5 className="text-[13px]">{icon.name}</h5>
+              <h5 className="text-[13px] text-gray-500">{icon.name}</h5>
             </motion.div>
           ))}
         </motion.div>
