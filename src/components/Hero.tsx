@@ -1,8 +1,39 @@
-import React from "react";
+import Image from "next/image";
+import React, { useRef, useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { SocialIcon } from "react-social-icons";
+import * as THREE from "three";
+import DOTS from "vanta/dist/vanta.dots.min";
+import NET from "vanta/dist/vanta.net.min";
 
 const Hero: React.FC = () => {
+  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const myRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!vantaEffect && myRef.current) {
+      const effect = NET({
+        THREE: THREE,
+        el: myRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 190.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: "#6A6E70",
+        backgroundColor: "#222628",
+      });
+
+      setVantaEffect(effect);
+    }
+
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+
   const [text] = useTypewriter({
     words: ["< I am a Software Engineer />", "< Lets Connect! />"],
     loop: true,
@@ -10,44 +41,37 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="h-screen flex flex-col items-center justify-end relative">
-      {/* Content Container */}
-      <div className="flex flex-col items-center justify-center z-10">
-        <h1 className="text-5xl text-black font-semibold">I am Brandon</h1>
-        <div className="text-4xl text-black font-semibold text-center pt-2">
-          <span className="">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
-        </div>
-        <div className="flex flex-row items-center space-x-4 pb-4 pt-6">
-          <a
-            href="https://www.linkedin.com/in/byoon888/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon url="https://www.linkedin.com/in/byoon888/" as="div" />
-          </a>
-          <a
-            href="https://github.com/byoon97"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon url="https://github.com/byoon97" as="div" />
-          </a>
-          <a
-            href="https://medium.com/@byoon5397"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon url="https://medium.com/@byoon5397" as="div" />
-          </a>
-        </div>
+    <div
+      className="h-screen flex flex-col items-center justify-center"
+      ref={myRef}
+    >
+      <h1 className="text-5xl font-semibold text-[#87C233]">I am Brandon</h1>
+      <div className="text-4xl font-semibold text-center pt-2">
+        <span className="text-white">{text}</span>
+        <Cursor cursorColor="#F7AB0A" />
       </div>
-
-      {/* Line Container */}
-      <div className="top-0 bottom-0 flex justify-center w-[1px] bg-gray-400 h-[40%]">
-        <div className="relative w-[1px] bg-gray-400 h-full">
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-500 rounded-full"></div>
-        </div>
+      <div className="flex flex-row items-center space-x-4 pb-4 pt-6">
+        <a
+          href="https://www.linkedin.com/in/byoon888/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon url="https://www.linkedin.com/in/byoon888/" as="div" />
+        </a>
+        <a
+          href="https://github.com/byoon97"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon url="https://github.com/byoon97" as="div" />
+        </a>
+        <a
+          href="https://medium.com/@byoon5397"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon url="https://medium.com/@byoon5397" as="div" />
+        </a>
       </div>
     </div>
   );
