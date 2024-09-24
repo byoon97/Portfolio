@@ -16,9 +16,9 @@ const Experience: React.FC = () => {
           Projects
         </h3>
         <div className="md:mt-14 lg:mt-20 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-thin scrollbar-track-rgb(35,21,59)/20 scrollbar-thumb-[#87C233]/80 items-end">
-          {projects.map((proj, i) => (
+          {projects.map((proj) => (
             <div
-              key={i}
+              key={proj.name}
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
             >
               <motion.img
