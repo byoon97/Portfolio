@@ -6,7 +6,9 @@ import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
 
 const Hero: React.FC = () => {
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(
+    null
+  ); 
   const myRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

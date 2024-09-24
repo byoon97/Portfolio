@@ -3,6 +3,7 @@ import { projects } from "../../public/projects/projects";
 import { motion } from "framer-motion";
 import { GrLanguage } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
+import { line } from "framer-motion/client";
 
 const Experience: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const Experience: React.FC = () => {
                 {" "}
                 {proj?.libraries.map((lib) => (
                   <img
+                    key={lib.name}
                     src={lib.img}
                     alt={lib.name}
                     className="h-7 w-7"
