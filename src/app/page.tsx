@@ -9,7 +9,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll bg-[#222628] scrollbar scrollbar-track-[#222628]/20 scrollbar-thumb-[#87C233]/80">
+    <div className="h-screen snap-y snap-mandatory overflow-scroll bg-[#222628] scrollbar scrollbar-track-[#222628]/20 scrollbar-thumb-[#87C233]/80 z-20">
       <Header />
       <div className="snap-start ">
         <Hero />
@@ -26,6 +26,7 @@ export default function Home() {
       <div className="snap-start">
         <Contact />
       </div>
+      <div className="w-full absolute top-[30%] bg-[#87C332]/10 left-0 h-[400px] -skew-y-12"></div>
     </div>
   );
 }
