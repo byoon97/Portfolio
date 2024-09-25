@@ -10,7 +10,7 @@ export const Icons:Icon[] = [
     },
     {
         name: 'Next',
-        img: '/icons/Next.png'
+        img: '/icons/next.png'
     },
     {
         name: 'JavsScript',
@@ -46,10 +46,10 @@ export const Icons:Icon[] = [
     },
     {
         name: 'Git',
-        img: '/icons/Git.png'
+        img: '/icons/git.png'
     },
     {
         name: 'Docker',
-        img: '/icons/Docker.webp'
+        img: '/icons/docker.webp'
     },
 ]

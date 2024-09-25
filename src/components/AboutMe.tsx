@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
             once: true,
           }}
           src="/portraits/gg.jpg"
-          className="mb-14 md:mb-0 flex-shrink-0 w-56 object-cover rounded-lg md:w-64 sm:h-[55%] md:h-full xl:w-[333.3px] xl:h-[425px]"
+          className="mb-6 md:mb-0 flex-shrink-0 w-56 object-cover rounded-lg md:w-64 sm:h-[55%] md:h-full xl:w-[333.3px] xl:h-[425px]"
         />
         <div className="space-y-10 px-0 md:px-10">
           <p className="text-[12px] md:text-[14px] text-gray-500">
