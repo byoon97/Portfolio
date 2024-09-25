@@ -12,7 +12,7 @@ type Inputs = {
 };
 
 export default function Contact() {
-  const { register, handleSubmit, watch, reset } = useForm<Inputs>();
+  const { register, handleSubmit, reset } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { name, email, subject, message } = data;
