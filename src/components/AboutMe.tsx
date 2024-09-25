@@ -33,16 +33,14 @@ const AboutMe: React.FC = () => {
           className="mb-6 md:mb-0 flex-shrink-0 w-56 object-cover rounded-lg md:w-64 sm:h-[55%] md:h-full xl:w-[333.3px] xl:h-[425px]"
         />
         <div className="space-y-10 px-0 md:px-10">
-          <p className="text-[12px] md:text-[14px] text-gray-500">
+          <p className="text-[12px] md:text-[14px] text-gray-500 text-left">
             Located in Queens, New York, I am a Bi-Lingual (Korean/English)
-            Software Developer with a main focus on the Front End. I enjoy
-            creating web-apps using the latest technology and cleanest design
-            patterns. I specialize in using frameworks such as React, languages
-            such as TypeScript, and libraries such as GraphQL/Apollo, Tailwind
-            CSS and Styled-Components. I define myself as a motivated individual
-            with a high learning capacity and continuously am learning on how to
-            be a better person each and every day. I am looking for a Junior/Mid
-            level role and am open to remote work.
+            Software Developer with a main focus on the Front End. I specialize
+            in using frameworks such as React, languages such as TypeScript, and
+            libraries such as GraphQL/Apollo, Tailwind CSS and
+            Styled-Components. I define myself as a motivated individual with a
+            high learning capacity and continuously am learning on how to be a
+            better person each and every day.
           </p>
         </div>
       </div>

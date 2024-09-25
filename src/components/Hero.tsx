@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import "../css/corner-border.css";
 import * as THREE from "three";
-
 import NET from "vanta/dist/vanta.net.min";
 import { motion } from "framer-motion";
 

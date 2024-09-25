@@ -24,18 +24,22 @@ export default function Header() {
       >
         <SocialIcon
           url="https://www.linkedin.com/in/byoon888/"
-          fgColor="gray"
+          fgColor="currentColor"
           bgColor="transparent"
+          className="hover:text-[#87C332] text-gray-500"
         />
+
         <SocialIcon
           url="https://github.com/byoon97"
-          fgColor="gray"
+          fgColor="currentColor"
           bgColor="transparent"
+          className="hover:text-[#87C332] text-gray-500"
         />
         <SocialIcon
           url="https://medium.com/@byoon5397"
-          fgColor="gray"
+          fgColor="currentColor"
           bgColor="transparent"
+          className="hover:text-[#87C332] text-gray-500"
         />
       </motion.div>
 
@@ -56,10 +60,10 @@ export default function Header() {
         className="flex flex-row items-center text-gray-400 cursor-pointer"
       >
         <SocialIcon
-          className="cursor-pointer"
           network="email"
-          fgColor="gray"
+          fgColor="currentColor"
           bgColor="transparent"
+          className="hover:text-[#87C332] text-gray-500"
         />
 
         <Link href="#contact">

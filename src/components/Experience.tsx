@@ -3,6 +3,7 @@ import { projects } from "../../public/projects/projects";
 import { motion } from "framer-motion";
 import { GrLanguage } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
 
 const Experience: React.FC = () => {
   return (
@@ -61,6 +62,21 @@ const Experience: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="relative h-4 w-full flex justify-center mt-4">
+          <motion.div
+            className="h-6 w-10 rounded-full border-[1px] border-[#87C233] right-10 absolute flex items-center justify-center animate-pulse"
+            animate={{
+              x: [0, 20, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <GoArrowRight color={"#87C233"} />
+          </motion.div>
         </div>
       </div>
     </motion.div>
