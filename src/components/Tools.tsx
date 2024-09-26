@@ -3,7 +3,6 @@ import { Icons } from "../../public/icons/Icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import "../css/corner-border.css";
-import Background from "./Background";
 
 const Tools: React.FC = () => {
   return (
