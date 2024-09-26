@@ -1,5 +1,6 @@
 "use client";
 import AboutMe from "@/components/AboutMe";
+import Background from "@/components/Background";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
@@ -9,24 +10,27 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll bg-[#222628] scrollbar scrollbar-track-[#222628]/20 scrollbar-thumb-[#87C233]/80 z-20">
+    <div className="h-screen snap-y snap-mandatory overflow-scroll bg-[#222628] scrollbar scrollbar-track-[#222628]/20 scrollbar-thumb-[#87C233]/80">
       <Header />
-      <div className="snap-start ">
+
+      <div className="snap-start">
         <Hero />
       </div>
-      <div className="snap-start ">
-        <AboutMe />
+      <div className="flex flex-col">
+        <Background />{" "}
+        <div className="snap-start ">
+          <AboutMe />
+        </div>
+        <div className="snap-start">
+          <Tools />
+        </div>
+        <div className="snap-start">
+          <Experience />
+        </div>
+        <div className="snap-start">
+          <Contact />
+        </div>
       </div>
-      <div className="snap-start ">
-        <Tools />
-      </div>
-      <div className="snap-start ">
-        <Experience />
-      </div>
-      <div className="snap-start">
-        <Contact />
-      </div>
-      <div className="w-full absolute top-[30%] bg-[#87C332]/10 left-0 h-[400px] -skew-y-12"></div>
     </div>
   );
 }

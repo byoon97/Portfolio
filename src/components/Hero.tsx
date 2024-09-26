@@ -4,6 +4,7 @@ import "../css/corner-border.css";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
 import { motion } from "framer-motion";
+import Background from "./Background";
 
 const Hero: React.FC = () => {
   const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
 
   return (
     <div
-      className="h-screen flex flex-col items-center justify-center "
+      className="h-screen flex flex-col items-center justify-center"
       ref={myRef}
     >
       <motion.div
@@ -103,6 +104,7 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
       </motion.div>
+      {/* <Background /> */}
     </div>
   );
 };

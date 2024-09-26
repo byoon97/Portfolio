@@ -14,7 +14,7 @@ const AboutMe: React.FC = () => {
         About Me
       </h3>
 
-      <div className="flex flex-col md:flex-row items-center justify-center mt-20 ">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-20 z-20">
         <motion.img
           initial={{
             x: -200,
@@ -37,10 +37,10 @@ const AboutMe: React.FC = () => {
             Located in Queens, New York, I am a Bi-Lingual (Korean/English)
             Software Developer with a main focus on the Front End. I specialize
             in using frameworks such as React, languages such as TypeScript, and
-            libraries such as GraphQL/Apollo, Tailwind CSS and
-            Styled-Components. I define myself as a motivated individual with a
-            high learning capacity and continuously am learning on how to be a
-            better person each and every day.
+            libraries such as GraphQL/Apollo, Tailwind CSS and Styled-Components
+            to create responsive websites. I define myself as a motivated
+            individual with a high learning capacity with the ability to create
+            a lasting impression upon others.
           </p>
         </div>
       </div>

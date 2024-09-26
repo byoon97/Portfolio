@@ -34,8 +34,8 @@ export default function Contact() {
         Contact Me
       </h3>
 
-      <div className="flex flex-col space-y-10 text-sm mt-14">
-        <div className="space-y-10 w-full flex items-start flex-col">
+      <div className=" flex flex-col space-y-10 text-sm mt-14 z-20">
+        <div className="space-y-10 w-full flex items-start flex-col z-20">
           <div className="flex items-center space-x-5 justify-center">
             <IoIosPhonePortrait className="text-[#87C233] h-6 w-6 animate-pulse" />
             <p className="text-[14px]">(917) 865-6604</p>
@@ -53,19 +53,19 @@ export default function Contact() {
           {/* form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 w-fit mx-auto"
+            className="flex flex-col space-y-2 w-fit mx-auto z-20"
           >
             <div className="flex space-x-2">
               <input
                 {...register("name")}
-                className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
+                className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-200 placeholder-gray-200 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
                 placeholder="Name"
                 type="text"
                 required
               />
               <input
                 {...register("email")}
-                className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
+                className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-200 placeholder-gray-200 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
                 placeholder="Email"
                 type="email"
                 required
@@ -74,7 +74,7 @@ export default function Contact() {
 
             <input
               {...register("subject")}
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
+              className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-200 placeholder-gray-200 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
               placeholder="Subject"
               type="text"
               required
@@ -82,7 +82,7 @@ export default function Contact() {
 
             <textarea
               {...register("message")}
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
+              className="outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-200 placeholder-gray-200 transition-all focus:border-[#87C233]/40 focus:text-[#87C233]/40 hover:border-[#87C233]/40 "
               placeholder="Message"
               required
             ></textarea>

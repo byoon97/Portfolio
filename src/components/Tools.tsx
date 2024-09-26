@@ -3,6 +3,7 @@ import { Icons } from "../../public/icons/Icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import "../css/corner-border.css";
+import Background from "./Background";
 
 const Tools: React.FC = () => {
   return (
@@ -16,16 +17,11 @@ const Tools: React.FC = () => {
         <h3 className="pl-[20px] absolute top-24 md:top-42 uppercase tracking-[20px] text-[#87C332] text-2xl text-center">
           Tools
         </h3>
-
-        {/* <h4 className=" text-[12.5px] mb-20">
-          Tools, Frameworks, and Libraries I am comfortable using on a daily
-          basis
-        </h4> */}
         <motion.div
-          className="grid grid-cols-4 gap-4 mb-22 relative p-10"
+          className="grid grid-cols-4 gap-4 mb-22 relative p-10 "
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} // Ensures the animation triggers once when in view
+          viewport={{ once: true }}
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -66,16 +62,16 @@ const Tools: React.FC = () => {
           {Icons.map((icon, index) => (
             <motion.div
               key={icon.name}
-              className="flex flex-col items-center justify-end space-y-2 h-full"
+              className="flex flex-col items-center justify-end space-y-2 h-full z-20"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.2 }} // Icons trigger when 20% visible
+              viewport={{ once: true, amount: 0.2 }}
               whileHover={{ rotateY: 360 }}
               style={{ perspective: 500 }}
             >
               <Image src={icon.img} width={40} height={40} alt={icon.name} />
-              <h5 className="text-[13px] text-gray-500">{icon.name}</h5>
+              <h5 className="text-[13px] text-gray-200">{icon.name}</h5>
             </motion.div>
           ))}
         </motion.div>
