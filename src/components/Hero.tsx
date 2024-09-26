@@ -4,7 +4,6 @@ import "../css/corner-border.css";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
 import { motion } from "framer-motion";
-import Background from "./Background";
 
 const Hero: React.FC = () => {
   const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(

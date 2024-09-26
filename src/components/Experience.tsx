@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { GrLanguage } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
-import Background from "./Background";
 
 const Experience: React.FC = () => {
   return (
